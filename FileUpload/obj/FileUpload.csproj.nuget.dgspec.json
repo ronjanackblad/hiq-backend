@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/ronjanackblad/Projects/FileUpload/FileUpload/FileUpload.csproj": {}
+  },
+  "projects": {
+    "/Users/ronjanackblad/Projects/FileUpload/FileUpload/FileUpload.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ronjanackblad/Projects/FileUpload/FileUpload/FileUpload.csproj",
+        "projectName": "FileUpload",
+        "projectPath": "/Users/ronjanackblad/Projects/FileUpload/FileUpload/FileUpload.csproj",
+        "packagesPath": "/Users/ronjanackblad/.nuget/packages/",
+        "outputPath": "/Users/ronjanackblad/Projects/FileUpload/FileUpload/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ronjanackblad/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
