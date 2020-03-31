@@ -37,7 +37,7 @@ namespace FileUpload.Controllers
 
 
         [HttpPost]
-        public string SingleFile(IFormFile file)
+        public ActionResult<ResponseModel> SingleFile(IFormFile file)
         {
             // POST method that accepts a file, 
             StringBuilder result = new StringBuilder();
@@ -82,7 +82,15 @@ namespace FileUpload.Controllers
 
             string modified = test.Replace(highestWord, "foo" + highestWord + "bar");
 
-            return modified;
+            var response = new ResponseModel();
+
+            response.MostUsedWord = highestWord;
+            response.Text = modified;
+            response.Frequencies = highestFreq;
+
+            return response;
+
+            //return modified;
         }
 
 
