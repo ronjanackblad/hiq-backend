@@ -1,45 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using FileUpload.Models;
 using Microsoft.AspNetCore.Http;
 using System.IO;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
 using System.Text;
-using Microsoft.AspNetCore.Cors;
-using Microsoft.Extensions.DependencyInjection;
-using System.Net.Http.Headers;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using Newtonsoft.Json;
 
 namespace FileUpload.Controllers
 {
     public class HomeController : Controller
     {
 
-        private IHostEnvironment _env;
-
-        public HomeController(IHostEnvironment env)
-        {
-            _env = env; 
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-
         [HttpPost]
         public ActionResult<ResponseModel> SingleFile(IFormFile file)
         {
-            // POST method that accepts a file, 
+            // POST method that accepts a file and returns json 
             StringBuilder result = new StringBuilder();
 
             using (var reader = new StreamReader(file.OpenReadStream()))
@@ -90,19 +64,7 @@ namespace FileUpload.Controllers
 
             return response;
 
-            //return modified;
         }
 
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
